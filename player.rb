@@ -28,16 +28,17 @@ class Player
         end
     end
   end
+  
 end
 
-#binding.pry
-
 def game
+
   puts "Player 1, what is your name?"
   player1 = Player.new(gets.chomp)
 
   puts "Player 2, what is your name?"
   player2 = Player.new(gets.chomp)
+
   while player1.lives > 0 && player2.lives > 0
     player1.question_generator
 
@@ -47,6 +48,7 @@ def game
 
     player2.verify
   end
+
 end
 
 game
